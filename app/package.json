@@ -4,8 +4,9 @@
   "description": "Socia Web Client",
   "main": "index.js",
   "scripts": {
+    "build:dev": "npm run build -w ./frontend && npm start",
     "start": "node .",
-    "dev": "npm run build -w ./frontend && nodemon ."
+    "dev": "nodemon --exec npm run build:dev"
   },
   "keywords": [
     "client",
@@ -14,6 +15,12 @@
   "workspaces": [
     "frontend"
   ],
+  "nodemonConfig": {
+    "ignore": [
+      "./frontend/dist/*"
+    ],
+    "ext": "js, jsx, css,json"
+  },
   "author": "vitalii-pokrivchak",
   "license": "MIT",
   "dependencies": {
