@@ -1,0 +1,25 @@
+{
+  "name": "socia-web",
+  "version": "0.1.0",
+  "description": "Socia Web Client",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "npm run build -w ./frontend && nodemon ."
+  },
+  "keywords": [
+    "client",
+    "web"
+  ],
+  "workspaces": [
+    "frontend"
+  ],
+  "author": "vitalii-pokrivchak",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
